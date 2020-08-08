@@ -1,0 +1,42 @@
+.main-video {
+  width: 100vw;
+  &__video {
+    object-fit: cover;
+    margin: 0;
+    height: auto !important;
+    width: 100% !important;
+  }
+  &__title {
+    @include font__mobile-h1-header();
+    margin: 0;
+  }
+  &__channel {
+    display: inline-block;
+    margin: $base__padding * 2 0 $base__padding * 4 0;
+  }
+  &__date {
+    display: inline-block;
+    margin-left: $base__padding;
+  }
+  img {
+    margin: 0;
+  }
+  &__views {
+    display: inline-block;
+    margin-left: $base__padding;
+    margin-bottom: $base__padding * 3;
+    margin-right: $base__padding * 3;
+  }
+  &__likes {
+    display: inline-block;
+    margin-left: $base__padding;
+  }
+  &__description {
+    padding-top: $base__padding * 3;
+    border-top: $divider__height solid $color__field-border;
+  }
+  &__text-container {
+    margin: $base__padding * 4 $mobile__grid-margin $base__padding * 5
+      $mobile__grid-margin;
+  }
+}

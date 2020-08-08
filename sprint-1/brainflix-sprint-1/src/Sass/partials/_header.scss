@@ -1,0 +1,38 @@
+.header {
+  @include display-flex(column, center, center);
+  height: $mobile__header-height;
+  margin: 0 $mobile__grid-margin;
+  width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3);
+
+  &__upLoadButton {
+    width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3)- 64px;
+    margin: $base__padding 0 $base__padding * 2 0;
+    height: 48px;
+    background-color: $color__primary-cta--brainfix;
+    color: $color__field-background-fill;
+  }
+  &__logo {
+    width: $mobile__grid-column * 2 + $mobile__grid-gutter;
+    height: $base__padding * 6;
+    object-position: center;
+  }
+  &__searchForm {
+    @include display-flex(row, center, center);
+    flex-wrap: wrap;
+    width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3);
+
+    input {
+      padding: 0;
+      border-width: 1px;
+      width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3)-2px;
+    }
+  }
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: 8px 0 16px 16px;
+  }
+}

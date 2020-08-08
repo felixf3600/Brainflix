@@ -1,0 +1,18 @@
+@import "../Sass/partials/mixins";
+@import "../Sass/partials/variables";
+@import "../Sass/partials/comments";
+@import "../Sass/partials/header";
+@import "../Sass/partials/mainVideo";
+@import "../Sass/partials/videoList";
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+.brainflix {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

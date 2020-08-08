@@ -1,0 +1,32 @@
+.comments {
+  margin: 0 $mobile__grid-margin;
+
+  &__image {
+    height: $base__padding * 6;
+    width: $base__padding * 6;
+    border-radius: 50%;
+  }
+  &__avatar {
+    height: $base__padding * 6;
+    width: $base__padding * 6;
+    border-radius: 50%;
+    object-position: left;
+  }
+  &__label {
+  }
+  &__comment {
+  }
+  &__button {
+  }
+
+  &__name {
+  }
+  &__timeStamp {
+  }
+  &__comment {
+  }
+  &__form {
+  }
+  &__list {
+  }
+}
