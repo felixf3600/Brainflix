@@ -108,14 +108,20 @@ class App extends Component {
   };
 
   render() {
-    const classes = ["header", "main-video", "comments", "video-list"];
+    const classes = [
+      "header",
+      "main-video",
+      "comments",
+      "video-list",
+      "main-video-details",
+    ];
     return (
       <div className="brainflix">
         <Header classes={classes[0]} />
         <MainVideo classes={classes[1]} video={this.state.mainVideo} />
         <Comments
           classes={classes[2]}
-          comments={this.state.mainVideo.comments}
+          video={this.state.mainVideo}
           // onClick={clickHandler}
         />
         <VideoList classes={classes[3]} videoList={this.state.sideVideo} />

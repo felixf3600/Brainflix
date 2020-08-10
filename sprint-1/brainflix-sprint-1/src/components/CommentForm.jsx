@@ -24,7 +24,7 @@ function CommentForm(props) {
           JOIN THE CONVERSATION
         </label>
         <br />
-        <input
+        <textarea
           type="text"
           name={"searchInput"}
           placeholder="Write comment here"

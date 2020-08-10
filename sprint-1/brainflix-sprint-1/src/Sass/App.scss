@@ -1,3 +1,4 @@
+@import "../Sass/partials/fonts";
 @import "../Sass/partials/mixins";
 @import "../Sass/partials/variables";
 @import "../Sass/partials/comments";
@@ -9,10 +10,22 @@ body,
 html {
   box-sizing: border-box;
   margin: 0;
+  font-family: $master__font;
 }
 .brainflix {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+p {
+  @include font__mobile-normal;
+  @include tablet {
+    @include font__normal;
+  }
 }

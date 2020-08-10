@@ -6,7 +6,7 @@ function SearchForm(props) {
 
   return (
     <form className={props.classes[1]}>
-      <input name="searchInput" placeholder="&#128269; search"></input>
+      <input name="searchInput" placeholder="&#128269; Search"></input>
       <button className="header__upLoadButton">&#43; UPLOAD</button>
       <Avatar classes={props.classes[2]} image={avatarImage} />
     </form>

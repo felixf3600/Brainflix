@@ -1,12 +1,62 @@
 .video-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 $mobile__grid-margin;
+  width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+  align-self: flex-start;
+
+  @include tablet {
+    width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+  }
+  @include desktop {
+    width: $desktop__grid-column * 4 + $desktop__grid-gutter * 3;
+    margin-left: $desktop__grid-gutter;
+    margin-right: $desktop__grid-margin;
+  }
+  h2 {
+    margin: $base__padding * 5 0;
+    color: $color__label-style;
+    @include desktop {
+      @include font__labels;
+    }
+  }
   &__item {
+    margin-bottom: $base__padding * 3;
+    @include display-flex(row, center, center);
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
   &__image {
     width: 120px;
     height: 70px;
+    border-radius: 4px;
   }
   &__title {
+    margin: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: $base__padding * 2;
+    @include font__mobile-normal;
+    @include tablet {
+      @include font__sub-header;
+      margin: 0;
+    }
   }
   &__channel {
+    margin: 0;
+  }
+  &__left-side {
+    width: $mobile__grid-column * 2 + $mobile__grid-gutter;
+  }
+
+  &__right-side {
+    width: $mobile__grid-column * 2 + $mobile__grid-gutter * 2;
+    margin-left: $base__padding * 2;
+    @include tablet {
+      width: $tablet__grid-gutter + $tablet__grid-column * 2;
+    }
   }
 }

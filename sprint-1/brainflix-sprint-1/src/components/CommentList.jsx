@@ -5,7 +5,7 @@ function CommentList(props) {
     "comments__image",
     "comments__name",
     "comments__timeStamp",
-    "comments__comment",
+    "comments__comment-display",
     "comments__left-side",
     "comments__rigth-side",
   ];
@@ -17,7 +17,7 @@ function CommentList(props) {
             <div className={classes[0]}></div>
           </div>
           <div className={classes[5]}>
-            <h3 className={classes[1]}>{comment.name}</h3>
+            <p className={classes[1]}>{comment.name}</p>
             <p className={classes[2]}>{comment.timeStamp}</p>
             <p className={classes[3]}>{comment.comment}</p>
           </div>

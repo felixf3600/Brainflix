@@ -1,8 +1,16 @@
 .header {
   @include display-flex(column, center, center);
   height: $mobile__header-height;
-  margin: 0 $mobile__grid-margin;
   width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3);
+  @include tablet {
+    @include display-flex(row, space-between, center);
+    width: 100%;
+    height: $nav-bar__height;
+  }
+  @include desktop {
+    width: $desktop__grid-column * 12 + $desktop__grid-gutter * 11;
+    margin: 0 $desktop__grid-margin;
+  }
 
   &__upLoadButton {
     width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3)- 64px;
@@ -10,21 +18,49 @@
     height: 48px;
     background-color: $color__primary-cta--brainfix;
     color: $color__field-background-fill;
+    border-radius: 4px;
+    border: none;
+    @include tablet {
+      width: $tablet__grid-column;
+      margin-top: 12px;
+    }
   }
   &__logo {
     width: $mobile__grid-column * 2 + $mobile__grid-gutter;
     height: $base__padding * 6;
     object-position: center;
+    @include tablet {
+      margin-left: $tablet__grid-margin;
+      margin-right: 169px;
+    }
+    @include desktop {
+      margin-left: 0;
+      margin-right: 509px;
+    }
   }
   &__searchForm {
     @include display-flex(row, center, center);
     flex-wrap: wrap;
     width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3);
+    @include tablet {
+      margin-right: $tablet__grid-margin;
+      width: $tablet__grid-column * 4 + $tablet__grid-gutter * 3;
+    }
+    @include desktop {
+      margin-right: 0;
+    }
 
     input {
       padding: 0;
       border-width: 1px;
       width: ($mobile__grid-column * 4 + $mobile__grid-gutter * 3)-2px;
+      height: $base__padding * 6;
+      border-radius: 4px;
+      padding-left: $base__padding;
+      @include tablet {
+        width: $tablet__grid-column * 2 + $tablet__grid-gutter * 2;
+        margin-right: $base__padding * 3;
+      }
     }
   }
   &__avatar {
