@@ -1,0 +1,88 @@
+.main-video {
+  width: 100vw;
+  @include display-flex(column, center, center);
+  border-bottom: $divider__height solid $color__field-border;
+
+  &__video {
+    object-fit: cover;
+    margin: 0;
+    height: auto !important;
+    width: 100% !important;
+    @include tablet {
+      max-width: 519px;
+    }
+    @include desktop {
+      max-width: 944px;
+    }
+  }
+  &__container {
+    width: 100vw;
+    background-color: black;
+    @include display-flex(column, center, center);
+    position: relative;
+  }
+  &__controls {
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    // margin: 0 $mobile__grid-margin $base__padding $mobile__grid-margin;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    @include tablet {
+      max-width: 519px-$base__padding * 2;
+    }
+    @include desktop {
+      max-width: 944px -$base__padding * 4;
+    }
+  }
+
+  &__button {
+    padding: $base__padding;
+    border: 4px;
+    background: rgba(black, 0.6);
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   cursor: pointer;
+    //   background: rgba(black, 1);
+    //   outline: 0;
+    // }
+  }
+
+  &__progress-bar {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 $base__padding;
+    padding: 0.625rem;
+    border-radius: 4px;
+    color: white;
+    background: rgba(black, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__progress-timeline {
+    height: 0.187rem;
+    margin-right: 0.625rem;
+    background: grey;
+    flex-grow: 1;
+  }
+  &__progress-scrubber {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    left: 0.624rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__progress-text {
+    text-align: center;
+  }
+
+  &__button-group {
+    display: flex;
+  }
+}

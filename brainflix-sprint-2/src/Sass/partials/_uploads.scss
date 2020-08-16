@@ -1,0 +1,140 @@
+.uploads {
+  //   border-top: 1px solid $color__field-border;
+  @include display-flex(column, center, center);
+  @include tablet {
+    width: $tablet__grid-gutter * 5 + $tablet__grid-column * 6;
+    align-items: normal;
+  }
+  @include desktop {
+    width: $desktop__grid-column * 12 + $desktop__grid-gutter * 11;
+  }
+  &__title {
+    margin: $base__padding * 3 $mobile__grid-margin $base__padding * 4
+      $mobile__grid-margin;
+    @include font__mobile-h1-header;
+    align-self: flex-start;
+    @include tablet {
+      @include font__h1;
+      margin: $base__padding * 6 $tablet__grid-margin $base__padding * 4
+        $tablet__grid-margin;
+    }
+  }
+  &__form {
+    margin: 0 $mobile__grid-margin;
+    @include tablet {
+      margin: 0 $tablet__grid-margin;
+      border-top: 1px solid $color__field-border;
+      width: $tablet__grid-column * 5 + $tablet__grid-gutter;
+    }
+    @include desktop {
+      width: $desktop__grid-column * 12 + $desktop__grid-gutter * 11;
+    }
+  }
+  &__inner-container {
+    @include tablet {
+      border-bottom: 1px solid $color__field-border;
+      margin-top: $base__padding * 5;
+      margin-bottom: $base__padding * 5;
+    }
+    @include desktop {
+      width: $desktop__grid-column * 12 + $desktop__grid-gutter * 11;
+      display: flex;
+    }
+  }
+  &__label {
+    color: $color__label-style;
+    @include font__mobile-labels;
+    @include tablet {
+      @include font__labels;
+    }
+  }
+  &__thumbnail {
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    border-radius: 4px;
+    margin-bottom: $base__padding * 4;
+    height: 153px;
+    object-fit: cover;
+    @include tablet {
+      width: 344px;
+      height: 183px;
+      margin-bottom: $base__padding * 5;
+    }
+    @include desktop {
+      margin-right: $desktop__grid-gutter;
+    }
+  }
+  &__video-title {
+    margin-bottom: $base__padding * 3;
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    height: $base__padding * 6;
+    border-radius: 4px;
+    border: 1px solid $color__field-border;
+    background-color: $color__field-background-fill;
+    padding-left: $base__padding;
+    @include font__mobile-normal;
+    resize: none;
+    @include tablet {
+      @include font__normal;
+      width: $tablet__grid-column * 5 + $tablet__grid-gutter;
+      height: $base__padding * 3;
+    }
+    @include desktop {
+      width: $desktop__grid-gutter * 7 + $desktop__grid-column * 8;
+    }
+  }
+
+  &__video-description {
+    padding-left: $base__padding;
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    height: 143px;
+    border-radius: 4px;
+    margin-bottom: $base__padding * 4;
+    background-color: $color__field-background-fill;
+    border: 1px solid $color__field-border;
+    resize: none;
+    @include font__mobile-normal;
+    @include tablet {
+      @include font__normal;
+      width: $tablet__grid-column * 5 + $tablet__grid-gutter;
+      margin-bottom: $base__padding * 5;
+      padding-bottom: $base__padding * 5;
+    }
+    @include desktop {
+      height: 94px;
+      width: $desktop__grid-gutter * 7 + $desktop__grid-column * 8;
+    }
+  }
+  &__button {
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    height: $base__padding * 6;
+    color: $color__field-background-fill;
+    background-color: $color__primary-cta--brainfix;
+    border-radius: 4px;
+    border: none;
+    @include font__mobile-normal;
+    @include tablet {
+      width: 160px;
+      @include font__normal;
+    }
+    &-container {
+      @include display-flex(column, center, center);
+      @include tablet {
+        flex-direction: row-reverse;
+        justify-content: right;
+      }
+      @include desktop {
+        width: $desktop__grid-column * 12 + $desktop__grid-gutter * 11;
+      }
+    }
+    &-cancel {
+      color: $color__primary-cta--brainfix;
+      margin-top: $base__padding;
+      background-color: white;
+    }
+  }
+  &__input-container {
+    @include desktop {
+      width: $desktop__grid-gutter * 7 + $desktop__grid-column * 8;
+    }
+  }
+}
