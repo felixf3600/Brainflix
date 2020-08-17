@@ -2,7 +2,6 @@
   margin: 0 $mobile__grid-margin;
   @include display-flex(column, center, center);
   align-self: flex-start;
-  // justify-self: ;
 
   @include tablet {
     margin: 0 $tablet__grid-margin;
@@ -41,18 +40,21 @@
   &__main-video-channel {
     display: inline-block;
     margin: $base__padding * 2 0 $base__padding * 4 0;
+    @include font__mobile-normal;
     @include tablet {
       margin: $base__padding * 3 0 $base__padding * 3 0;
       height: 22px;
       align-self: baseline;
+      @include font__normal;
     }
   }
   &__main-video-date {
     display: inline-block;
     margin-left: $base__padding;
-    @include tablet {
+    @include font__mobile-normal @include tablet {
       height: 22px;
       margin: 0 $base__padding;
+      @include font__normal;
     }
   }
   img {
@@ -69,11 +71,6 @@
       justify-items: end;
     }
   }
-  br {
-    @include tablet {
-      // display: none;
-    }
-  }
   &__main-video-likes {
     display: inline-block;
     margin: 0 $base__padding * 3 0 $base__padding;
@@ -87,6 +84,7 @@
     }
   }
   &__main-video-text-container {
+    @include font__mobile-normal;
     align-self: flex-start;
     margin: $base__padding * 4 $mobile__grid-margin $base__padding * 3 0;
     min-width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
@@ -94,6 +92,7 @@
     padding-bottom: $base__padding * 3;
     border-bottom: 1px solid $color__field-border;
     @include tablet {
+      @include font__normal;
       width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
       margin-bottom: $base__padding * 5;
       margin: $base__padding * 6 $tablet__grid-margin 0 0;
@@ -141,9 +140,14 @@
     }
   }
   &__label {
+    @include font__mobile-labels;
     color: $color__label-style;
+    @include tablet {
+      @include font__labels;
+    }
   }
   &__comment {
+    @include font__mobile-normal;
     padding: 0;
     margin: 0 0 $base__padding * 2 0;
     border-width: 1px;

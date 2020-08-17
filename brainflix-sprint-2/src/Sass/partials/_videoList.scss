@@ -4,6 +4,9 @@
   margin: 0 $mobile__grid-margin;
   width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
   align-self: flex-start;
+  a {
+    text-decoration: none;
+  }
 
   @include tablet {
     width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
