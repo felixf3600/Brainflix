@@ -51,7 +51,8 @@
   &__main-video-date {
     display: inline-block;
     margin-left: $base__padding;
-    @include font__mobile-normal @include tablet {
+    @include font__mobile-normal;
+    @include tablet {
       height: 22px;
       margin: 0 $base__padding;
       @include font__normal;
