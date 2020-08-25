@@ -1,0 +1,251 @@
+.comments {
+  margin: 0 $mobile__grid-margin;
+  @include display-flex(column, center, center);
+  align-self: flex-start;
+
+  @include tablet {
+    margin: 0 $tablet__grid-margin;
+    width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+  }
+  @include desktop {
+    margin-left: $desktop__grid-margin;
+    width: $desktop__grid-column * 8 + $desktop__grid-gutter * 7;
+  }
+  h2 {
+    @include font__mobile-h2-header;
+    align-self: flex-start;
+    margin: 0 0 $base__padding * 4 0;
+    @include tablet {
+      @include font__h2;
+    }
+  }
+  &__main-video-description {
+    margin-bottom: $base__padding * 5;
+    @include tablet {
+      align-self: normal;
+      width: $tablet__grid-column * 4 + $tablet__grid-gutter * 5;
+    }
+    @include desktop {
+      width: $desktop__grid-column * 6 + $desktop__grid-gutter * 5;
+    }
+  }
+  &__main-video-title {
+    @include font__mobile-h1-header;
+    margin: 0;
+    @include tablet {
+      @include font__h1;
+      width: 100%;
+    }
+  }
+  &__main-video-channel {
+    display: inline-block;
+    margin: $base__padding * 2 0 $base__padding * 4 0;
+    @include font__mobile-normal;
+    @include tablet {
+      margin: $base__padding * 3 0 $base__padding * 3 0;
+      height: 22px;
+      align-self: baseline;
+      @include font__normal;
+    }
+  }
+  &__main-video-date {
+    display: inline-block;
+    margin-left: $base__padding;
+    @include font__mobile-normal;
+    @include tablet {
+      height: 22px;
+      margin: 0 $base__padding;
+      @include font__normal;
+    }
+  }
+  img {
+    margin: 0;
+  }
+  &__main-video-views {
+    display: inline-block;
+    margin: 0 $base__padding * 3 0 $base__padding;
+
+    @include tablet {
+      right: 0;
+      height: 22px;
+      margin: 0 $base__padding;
+      justify-items: end;
+    }
+  }
+  &__main-video-likes {
+    display: inline-block;
+    margin: 0 $base__padding * 3 0 $base__padding;
+
+    @include tablet {
+      height: 22px;
+      margin: 0 $base__padding;
+    }
+    @include desktop {
+      margin-right: $base__padding * 4;
+    }
+  }
+  &__main-video-text-container {
+    @include font__mobile-normal;
+    align-self: flex-start;
+    margin: $base__padding * 4 $mobile__grid-margin $base__padding * 3 0;
+    min-width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    width: 100%;
+    padding-bottom: $base__padding * 3;
+    border-bottom: 1px solid $color__field-border;
+    @include tablet {
+      @include font__normal;
+      width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+      margin-bottom: $base__padding * 5;
+      margin: $base__padding * 6 $tablet__grid-margin 0 0;
+    }
+    @include desktop {
+      margin-right: 0px;
+      width: $desktop__grid-column * 8 + $desktop__grid-gutter * 7;
+      margin-top: $base__padding * 5;
+    }
+  }
+  &__main-video-channel-details {
+    @include tablet {
+      @include display-flex(row, space-between, center);
+      width: 100%;
+    }
+  }
+  &__main-video-left-side {
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__main-video-right-side {
+    @include tablet {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__image {
+    height: $base__padding * 6;
+    width: $base__padding * 6;
+    border-radius: 50%;
+    background-color: $color__field-border;
+    justify-self: flex-start;
+  }
+  &__avatar {
+    height: $base__padding * 6;
+    width: $base__padding * 6;
+    border-radius: 50%;
+    object-position: left;
+    @include tablet {
+      margin-bottom: $base__padding * 3;
+    }
+  }
+  &__label {
+    @include font__mobile-labels;
+    color: $color__label-style;
+    @include tablet {
+      @include font__labels;
+    }
+  }
+  &__comment {
+    @include font__mobile-normal;
+    padding: 0;
+    margin: 0 0 $base__padding * 2 0;
+    border-width: 1px;
+    width: $mobile__grid-column * 3 + $mobile__grid-gutter * 2.5;
+    height: 100px;
+    border-radius: 4px;
+    border: 2px solid $color__primary-cta--brainfix;
+    @include tablet {
+      width: 440px;
+      height: 48px;
+      display: inline-block;
+    }
+    @include desktop {
+      width: 436px;
+    }
+  }
+  &__button {
+    width: $mobile__grid-column * 3 + $mobile__grid-gutter * 2.5;
+    border-radius: 4px;
+    padding: 0;
+    height: $base__padding * 6;
+    color: $color__field-background-fill;
+    background-color: $color__primary-cta--brainfix;
+    font-weight: bold;
+    border: none;
+    @include tablet {
+      width: 160px;
+      height: 48px;
+      margin: 0 $base__padding * 4 $base__padding * 3 $base__padding * 2;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &__left-side {
+    width: $mobile__grid-column;
+    margin-top: $base__padding * 2;
+  }
+  &__rigth-side {
+    width: ($mobile__grid-column + $mobile__grid-gutter) * 3;
+    margin-left: $base__padding * 1;
+    align-self: flex-end;
+    @include tablet {
+      width: 656px;
+    }
+  }
+  &__name {
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: bold;
+    width: ($mobile__grid-gutter + $mobile__grid-column) * 2;
+    @include tablet {
+      width: fit-content;
+      margin-right: $base__padding;
+    }
+  }
+  &__timeStamp {
+    display: inline-block;
+    align-self: flex-end;
+    width: $mobile__grid-column + $mobile__grid-gutter;
+    color: $color__label-style;
+  }
+  &__comment-display {
+    width: ($mobile__grid-gutter + $mobile__grid-column) * 3;
+    @include tablet {
+      width: 624px;
+    }
+  }
+  &__form {
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+    align-self: normal;
+    @include display-flex(row, center, flex-start);
+    @include tablet {
+      width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+      position: relative;
+    }
+  }
+  &__list {
+    align-self: normal;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+
+    @include display-flex(column, center, center);
+    border-bottom: 1px solid $color__field-border;
+    @include tablet {
+      width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+    }
+
+    li {
+      width: $mobile__grid-column * 4 + $mobile__grid-gutter * 3;
+      @include display-flex(row, center, flex-start);
+      border-bottom: 1px solid $color__field-border;
+      @include tablet {
+        width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+      }
+    }
+  }
+}
